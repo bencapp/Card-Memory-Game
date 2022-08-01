@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Play Card Memory</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1 id="header">Card Memory Game</h1>
+    <h2 id="subheader">Find all the pairs!</h2>
+    <label id="difficulty"
+      >Difficulty:
+      <select id="difficulty-select">
+        <option value="Easy">Easy</option>
+        <option value="Medium">Medium</option>
+        <option value="Hard">Hard</option>
+      </select>
+      <button id="reset" type="button">Reset</button>
+    </label>
+    <p id="attempt-count">Guesses: <span class="guesses">0</span></p>
+
+    <div id="win-box">
+      <div id="win-box-container">
+        <h2 id="win-title">You Won!</h2>
+        <p id="win-text">
+          It took you <span class="guesses"></span> guesses to find all the
+          pairs.
+        </p>
+        <label
+          >Difficulty:
+          <select id="difficulty-select-won">
+            <option value="Easy">Easy</option>
+            <option value="Medium">Medium</option>
+            <option value="Hard">Hard</option>
+          </select>
+        </label>
+        <button id="reset-won" type="button">Play Again</button>
+      </div>
+    </div>
+    <div id="win-overlay"></div>
+  </body>
+</html>
